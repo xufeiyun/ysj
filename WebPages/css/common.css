@@ -1,0 +1,70 @@
+.container-fluid
+{
+    
+    min-width: 860px!important;
+}
+
+.tableBorder
+{
+    border-top: 2px solid white; /*no top border*/
+}
+
+.banner
+{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.control-label
+{
+	width: 200px!important;
+}
+
+.title-left
+{
+	padding-top: 12px;
+	padding-left: 60px;
+}
+.tile-left img
+{
+}
+
+.title-right
+{
+	padding-top: 18px;
+}
+
+.hand, legend
+{
+   cursor: pointer;
+}
+
+.row_expand, .row_collapse
+{
+   cursor: pointer;
+   color: blue;
+   border: 1px solid blue;
+   height: 20px!important;
+   width: 20px!important;
+   margin-top: -2px;
+   margin-right: 4px;
+   background-image: url(../img/glyphicons-halflings.png);
+}
+
+.row_expand
+{
+   background-position: 63px 65px;
+}
+
+.row_collapse
+{
+   background-position: 38px 65px;
+}

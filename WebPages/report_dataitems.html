@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<HTML class="">
+<HEAD>
+	<TITLE>Data Items of Report Period for Firm1</TITLE>
+    <meta http-equiv="Page-Enter" Content="blendTrans(Duration=0.5)">
+    <meta http-equiv="Page-Exit" Content="blendTrans(Duration=0.5)">
+    <meta http-equiv=Access-Control-Allow-Origin content=*>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="Language Translator">
+    <meta name="Author" content="Eric Xu">
+    <meta name="Email" content="vanillapeter@163.com">
+    <meta name="Version" content="1.0 Beta">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/flat-ui-fonts.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-switch.css"/>
+	
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/master.css"/>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap-switch.min.js"></script>
+    
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/master.js"></script>
+</HEAD>
+
+    
+  <body class="">
+	<div class="container-fluid ">
+		<img id="__divBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+	</div>
+	
+	<div class="container-fluid">
+		<img id="__divTopNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__topnavbar.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+		
+		<div class="row-fluid">
+			<img id="__divLeftNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__leftnavbar.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+			
+			<div class="span9">
+				<form class="form-horizontal table-hover">
+					<fieldset>
+						<legend>				
+							<div class="container-fluid ">
+								<div class="row-fluid">
+									<div class="span12">
+										Data Items for Firm1's Report Period: Return Due on 2014-7-31
+									</div>
+								</div>
+							</div>
+						</legend>
+						<div class="row-fluid">
+							<div class="span12">
+								<p class="text-left text-warning">
+									Click on the data item link to view / edit. Click [+] to view more information. You can also validat, submit, print, download PDF and Extract to XML, by selecting the data item and lcicking on the relevant actions below.
+									<br/><br/>
+									To submit a PSD report, select the reort and click Submit.
+									<br/><br/>
+									Note:  NGP reports cannot be submitted in YinData Inc, they are shown on your schedule as a reminder for you to send the report us.
+											
+									<table width="100%" class="">
+										<thead>
+											<th colspan="2" class="text-left text-success">Reporting Period Information</th>
+										</thead>
+										<tbody>
+											<tr class="info">
+												<td>Data Item Due Date:</td>
+												<td>2014-7-31</td>
+											</tr>
+											<tr class="info">
+												<td>Reporting Period Start Date:</td>
+												<td>2014-7-31</td>
+											</tr>
+											<tr class="info">
+												<td>Reporting Period End Date:</td>
+												<td>2014-7-31</td>
+											</tr>
+											<tr class="info">
+												<td>Reporting Period Status:</td>
+												<td>ReadyToComplete</td>
+											</tr>
+										</tbody>
+									</table>
+								</p>
+							</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th><input type="checkbox" title="Select All"></input></th>
+									<th>Data Item</th>
+									<th>Completion Status</th>
+									<th>Need Cross Validation ?</th>
+									<th>Resubmission</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr id="ReturnItem" class="warning hand" title="Display or Hide Details">
+									<td><input type="checkbox" class="checkbox"></input></td>
+									<td><button id="btnDisplayDetail" class="row_expand"></button><a href="#">BG4-01</a></td>
+									<td>Draft</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr id="ReturnItemDetails" class="hide">
+									<td colspan="5">
+										<table width="100%" class="">
+											<thead>
+												<th colspan="2" class="text-left text-success">Data Item Information</th>
+											</thead>
+											<tbody>
+												<tr class="info">
+													<td>Include Cross Validation Items:</td>
+													<td></td>
+												</tr>
+												<tr class="info">
+													<td>Reporting Period Start Date:</td>
+													<td>2014-7-31</td>
+												</tr>
+												<tr class="info">
+													<td>Reporting Period End Date:</td>
+													<td>2014-7-31</td>
+												</tr>
+												<tr class="success">
+													<td>Last Updated By:</td>
+													<td>Eric</td>
+												</tr>
+												<tr class="success">
+													<td>Last Updated Date:</td>
+													<td>2014/06/12</td>
+												</tr>
+												<tr class="warn">
+													<td>Last Updated Version:</td>
+													<td>1.0</td>
+												</tr>
+												<tr class="success">
+													<td>Submitted By:</td>
+													<td>Frank</td>
+												</tr>
+												<tr class="success">
+													<td>Submitted Date:</td>
+													<td>2014/06/10</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="info">
+									<td><input type="checkbox"></input></td>
+									<td><button id="btnDisplayDetail" class="row_expand"></button>BG4-01</td>
+									<td>No Data</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></input></td>
+									<td><button id="btnDisplayDetail" class="row_expand"></button>BG4-01</td>
+									<td>WaitForCrossValidation</td>
+									<td>Yes</td>
+									<td></td>
+								</tr>
+								<tr class="success">
+									<td><input type="checkbox"></input></td>
+									<td><button id="btnDisplayDetail" class="row_expand"></button>BG4-01</td>
+									<td>WaitForCrossValidation</td>
+									<td>Yes</td>
+									<td></td>
+								</tr>
+								<tr class="error">
+									<td><input type="checkbox"></input></td>
+									<td><button id="btnDisplayDetail" class="row_expand"></button>BG4-01</td>
+									<td>No Data</td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+				<a href="upload_reports.html" class="btn btn-success">Validate Selected Items</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="upload_reports.html" class="btn btn-info">Back</a>
+				<div class="pagination">
+					<ul>
+						<li>
+							<a href="#">上一页</a>
+						</li>
+						<li>
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+						<li>
+							<a href="#">5</a>
+						</li>
+						<li>
+							<a href="#">下一页</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  </body>
+
+</html>

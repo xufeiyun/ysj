@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<HTML class="">
+<HEAD>
+	<TITLE>User Management</TITLE>
+    <meta http-equiv="Page-Enter" Content="blendTrans(Duration=0.5)">
+    <meta http-equiv="Page-Exit" Content="blendTrans(Duration=0.5)">
+    <meta http-equiv=Access-Control-Allow-Origin content=*>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="Language Translator">
+    <meta name="Author" content="Eric Xu">
+    <meta name="Email" content="vanillapeter@163.com">
+    <meta name="Version" content="1.0 Beta">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/flat-ui-fonts.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-switch.css"/>
+	
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/master.css"/>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap-switch.min.js"></script>
+    
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/master.js"></script>
+</HEAD>
+
+    
+  <body class="">
+	<div class="container-fluid ">
+		<img id="__divBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+	</div>
+	
+	<div class="container-fluid">
+		<img id="__divTopNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__topnavbar.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+		
+		<div class="row-fluid">
+			<img id="__divLeftNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__leftnavbar.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>			
+
+			<div class="span9">
+				<form class="form-horizontal table-hover">
+					<fieldset>
+						<legend>Users Management of Firm1</legend>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>
+										用户名称
+									</th>
+									<th>
+										所属机构
+									</th>
+									<th>
+										用户权限
+									</th>
+									<th>
+										用户状态
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										root
+									</td>
+									<td>
+										Firm1
+									</td>
+									<td>
+										SysAdmin
+									</td>
+									<td>
+										Approved
+									</td>
+								</tr>
+								<tr class="success">
+									<td>
+										Frank
+									</td>
+									<td>
+										Firm1
+									</td>
+									<td>
+										FirmAdmin
+									</td>
+									<td>
+										Approved
+									</td>
+								</tr>
+								<tr class="error">
+									<td>
+										Eric
+									</td>
+									<td>
+										Firm1
+									</td>
+									<td>
+										RegisteredUser
+									</td>
+									<td>
+										Approved
+									</td>
+								</tr>
+								<tr class="warning">
+									<td>
+										David
+									</td>
+									<td>
+										Firm1
+									</td>
+									<td>
+										GuestUser
+									</td>
+									<td>
+										Approved
+									</td>
+								</tr>
+								<tr class="info">
+									<td>
+										Grace
+									</td>
+									<td>
+										Firm1
+									</td>
+									<td>
+										LimitedUser
+									</td>
+									<td>
+										Approving
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+				<div class="pagination">
+					<ul>
+						<li>
+							<a href="#">上一页</a>
+						</li>
+						<li>
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>
+							<a href="#">4</a>
+						</li>
+						<li>
+							<a href="#">5</a>
+						</li>
+						<li>
+							<a href="#">下一页</a>
+						</li>
+					</ul>
+				</div>
+				<form class="form-horizontal">
+					<fieldset>
+						<legend id="titleCreateAccount">Create a User Account</legend>
+						<div id="containerCreateAccount" class="hide">
+							<div class="control-group">
+								<label class="control-label">用户邮箱：</label>
+								<div class="controls">
+									<input id="inputEmail" type="password" placeholder="Email" /> (用于接收默认登录密码)
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">登录账号：</label>
+								<div class="controls">
+									<input id="inputEmail" type="text" placeholder="Login Account" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">所属机构：</label>
+								<div class="controls">
+									<input id="inputEmail" type="text" class="disabled" placeholder="Firm1"/>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">用户权限：</label>
+								<div class="controls">
+									<input id="inputEmail" type="password" placeholder="RegisteredUser" />
+								</div>
+							</div>
+							<div class="control-group">
+								<div class="controls">
+									<button class="btn btn-primary" id="btnSubmit" type="button">提 交</button>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+
+  </body>
+
+</html>

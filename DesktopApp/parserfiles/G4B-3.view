@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CBRC Data Validator</title>
+  </head>
+  <body>
+    <article>      
+      <section>
+        <fieldset>
+          <legend>Validation Report for CBRC Data Validator</legend>
+          <form class="form-search"></form>
+          <iframe style="border: 0px;"></iframe>
+        </fieldset>
+      </section>
+    </article>
+      <table cellpadding="0" cellspacing="0" border="0" class="fieldTable1">
+
+         <tr>
+
+                 <td class="col1 font_family2 Italic font15 Bold" style="padding-top:5px;">C5</td>
+
+                 <td class="col2 ar font_family2 Italic font15 Bold" style="padding-top:5px;">Example</td>                                                                              
+
+         </tr>
+
+         <tr>
+
+                 <td class="col1 font_family2 Italic font15 Bold">C6</td>
+
+                 <td id="3-L8" class="col2 ar font_family2 Italic font15 Bold">1</td>                                                           
+
+          </tr>
+	</table>
+
+
+  </body>
+</html>
