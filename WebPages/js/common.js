@@ -109,7 +109,7 @@ var setRightLinkOfBanner = function () {
     var text = "";
 
     if (page == "login.html") {
-        text = "News to Google";
+        text = "Welcome to Google";
         $("#__buttonRegisterFirmAccount").removeClass("hide");
     }
     else if (page == "register.html")
