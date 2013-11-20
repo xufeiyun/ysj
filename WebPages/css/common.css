@@ -89,7 +89,7 @@
     padding-left: 20px;
 }
 
-.hand, legend
+.hand, legend, input
 {
    cursor: pointer;
 }

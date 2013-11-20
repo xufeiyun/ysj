@@ -44,75 +44,71 @@
 						<legend>				
 							<div class="container-fluid ">
 								<div class="row-fluid">
+								    <!-- Title -->
 									<div class="span6">
 										Upload Report Periods of Firm1									
 									</div>
+								    <!-- Button -->
 									<div class="span6">
-										<form class="form-horizontal">
-											<div class="control-group">
-												<div class="controls">
-													<a id="btnCreateReportPeriod" href="#myModal" class="btn btn-primary" type="button" data-toggle="modal">Create a Report Period</a>
-												</div>
-												<!-- Modal -->
-												<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-													<div class="modal-header">
-													    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-													    <h3 id="myModalLabel">Create a Report Period of Firm1</h3>
-													</div>
-													<div class="modal-body">
-														<div class="row-fluid">
-														    <div class="span12">															
-														        <form class="form-horizontal">
-															        <fieldset>
-						                                                <table class="table tableBorder">
-							                                                <tbody>
-								                                                <tr>
-									                                                <td>
-                                                                                        <div class="control-group">
-                                                                                            <label class="control-label">Return Due Date：</label>
-                                                                                            <div class="controls">
-                                                                                                <input id="inputReportDueDate" placeholder="2013/07/12" type="text" />
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="control-group">
-                                                                                            <label class="control-label">Report Start Date：</label>
-                                                                                            <div class="controls">
-                                                                                                <input id="inputReportStartDate" placeholder="2013/07/12" type="text" />
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="control-group">
-                                                                                            <label class="control-label">Report End Date：</label>
-                                                                                            <div class="controls">
-                                                                                                <input id="inputReportEndDate" placeholder="2013/07/12" type="text" />
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="control-group">
-                                                                                            <label class="control-label">Created By：</label>
-                                                                                            <div class="controls">
-                                                                                                <input id="inputPassword" placeholder="Eric Xu" type="text" />
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-															        </fieldset>
-														        </form>
-														    </div>
-													    </div>
-													</div>
-													<div class="modal-footer">
-													    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-													    <button class="btn btn-primary">Submit</button>
-													</div>
-												</div>
+										<div class="control-group">
+											<div class="controls">
+												<a id="btnCreateReportPeriod" href="#myModal" class="btn btn-primary" type="button" data-toggle="modal">Create a Report Period</a>
 											</div>
-										</form>
+                                        </div>
 									</div>
 								</div>
 							</div>
 						</legend>
+
+						<!-- Modal -->
+						<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h3 id="myModalLabel">Create a Report Period of Firm1</h3>
+							</div>
+							<div class="modal-body">
+								<div class="row-fluid">
+									<div class="span12">
+										<form class="form-horizontal table-hover">
+                                            <div class="control-group">
+                                                <label class="control-label">Return Due Date：</label>
+                                                <div class="controls">
+                                                    <input id="inputReportDueDate" placeholder="2013/07/12" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Report Start Date：</label>
+                                                <div class="controls">
+                                                    <input id="inputReportStartDate" placeholder="2013/07/12" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Report End Date：</label>
+                                                <div class="controls">
+                                                    <input id="inputReportEndDate" placeholder="2013/07/12" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Created By：</label>
+                                                <div class="controls">
+                                                    <input id="inputPassword" placeholder="Eric Xu" type="text" />
+                                                </div>
+                                            </div>
+
+										</form>
+									</div>
+								</div>
+							</div>
+							<!-- Button of Modal -->
+							<div class="modal-footer">
+								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+								<button class="btn btn-primary">Submit</button>
+							</div>
+						</div>
+
 						<button id="btnCreateReportPeriod" class="btn btn-primary" type="button">Expand All</button>
+
+					    <!-- Data -->
 						<table class="table">
 							<thead>
 								<tr>
@@ -191,32 +187,9 @@
 						</table>
 					</fieldset>
 				</form>
-				<div class="pagination">
-					<ul>
-						<li>
-							<a href="#">上一页</a>
-						</li>
-						<li>
-							<a href="#">1</a>
-						</li>
-						<li>
-							<a href="#">2</a>
-						</li>
-						<li>
-							<a href="#">3</a>
-						</li>
-						<li>
-							<a href="#">4</a>
-						</li>
-						<li>
-							<a href="#">5</a>
-						</li>
-						<li>
-							<a href="#">下一页</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+			    
+                <img id="__divBottomPagerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__pager.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+            </div>
 		</div>
 	</div>
 
