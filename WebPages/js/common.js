@@ -5,82 +5,132 @@
 
 var MenuItemSelected = "CurrentMenuItem";
 
-$(document).ready(function () {
-	setTimeout(loadFunction, 1);
-    
+$(document).ready(function ()
+{
+    setTimeout(loadFunction, 1);
+
     $(window).scroll(function (e)
     {
         keepBannerDisplay();
+        keepMenuDisplay();
     });
 });
 
-var keepBannerDisplay = function () {
-    var banner = $('#__divBannerTopContainer').css("top", window.scrollY);
-    var menuLeft = $('#__divLeftNavigateMenu').css("top", window.scrollY);
+var keepBannerDisplay = function ()
+{
+    //var banner = $('#__divTopBannerContainer').css("top", window.scrollY);
 };
 
-var loadFunction = function () {
-    var banner = $('#__divBannerTopContainer');
-    var parent = banner.parent();
-    var menuLeft = $('#__divLeftNavigateMenu');
-    parent.css("padding-left", "0px");
-    parent.css("margin-bottom", (banner.height() + 5) + "px");
+var keepMenuDisplay = function ()
+{
+    //var menuLeft = $('#__divLeftNavigateMenu').css("top", window.scrollY);
+};
+
+var loadSpecificPageContent = function (element)
+{
+    var ele = $(element);
+
+    var title = ele.attr("cbrc-title");
+    var page = ele.attr("cbrc-page");
+
+    //alert(title + "-----" + page);
+    document.title = title;
+    var main = $("#__divRightMainContent");
+    var html = ReadFileAPI.getFileContentsSync(page);
+    main.html(html);
+    if (page == "__login.html")
+    {
+        bindLoginEvents();
+    }
+};
+
+/*login events*/
+var bindLoginEvents = function ()
+{
+    $("#btnLogin").click(function ()
+    {
+        loadSpecificPageContent();
+    });
+};
+
+var loadFunction = function ()
+{
+    var banner = $('#__divTopBannerContainer');
+    var navbar = $('#__divTopNavBarContainer');
+    var leftMenu = $('#__divLeftNavigateMenu');
+    //navbar.css("margin-bottom", (banner.height() + 5) + "px");
+    //parent.css("padding-left", "0px");
+    //parent.css("margin-bottom", (banner.height() + 5) + "px");
 
     // disable click event for [+]
-    $("button[class='row_expand']").click(function (e) {
+    $("button[class='row_expand']").click(function (e)
+    {
         return false;
     });
 
     // one item to show/hide details
-    $("#ReturnItem").click(function (e) {
+    $("#ReturnItem").click(function (e)
+    {
         $("#ReturnItemDetails").toggle();
         var btn = $("#btnDisplayDetail")[0];
         var css = btn.getAttribute("class");
-        if (css.split("expand").length > 1) {
+        if (css.split("expand").length > 1)
+        {
             btn.removeAttribute("class");
             btn.setAttribute("class", "row_collapse");
         }
-        else {
+        else
+        {
             btn.removeAttribute("class");
             btn.setAttribute("class", "row_expand");
         }
     });
 
     // menu item events
-    $("#btnFirmManagement").click(function () {
+    $("#btnFirmManagement").click(function ()
+    {
         OpenFirmManagementPage();
     });
-    $("#btnUserManagement").click(function () {
+    $("#btnUserManagement").click(function ()
+    {
         OpenUserManagementPage();
     });
-    $("#btnViewUserGroup").click(function () {
+    $("#btnViewUserGroup").click(function ()
+    {
         OpenViewUserGroupPage();
     });
-    $("#btnUpdateUserProfile").click(function () {
+    $("#btnUpdateUserProfile").click(function ()
+    {
         OpenUpdateUserProfilePage();
     });
-    $("#btnChangePassword").click(function () {
+    $("#btnChangePassword").click(function ()
+    {
         OpenChangeUserPasswordPage();
     });
-    $("#btnUploadReports").click(function () {
+    $("#btnUploadReports").click(function ()
+    {
         OpenUploadReportsPage();
     });
-    $("#btnUploadHistory").click(function () {
+    $("#btnUploadHistory").click(function ()
+    {
         OpenUploadHistoryPage();
     });
 
-    $('#btnSubmitSecurity').click(function (e) {
+    $('#btnSubmitSecurity').click(function (e)
+    {
         OpenFirmManagementPage();
     });
 
     // set title
-    $("#titleCreateAccount").click(function (e) {
+    $("#titleCreateAccount").click(function (e)
+    {
         $("#containerCreateAccount").toggle();
     });
     var title = $("#titleCreateAccount");
     title.attr("title", title.html());
 
-    $("#frmCreateUserGroup").click(function () {
+    $("#frmCreateUserGroup").click(function ()
+    {
         ShowCreateUserGroup();
     });
 

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<HTML class="">
+<HEAD>
+	<TITLE>Master UI Page Template</TITLE>
+    <meta http-equiv="Page-Enter" Content="blendTrans(Duration=0.5)">
+    <meta http-equiv="Page-Exit" Content="blendTrans(Duration=0.5)">
+    <meta http-equiv=Access-Control-Allow-Origin content=*>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="Language Translator">
+    <meta name="Author" content="Eric Xu">
+    <meta name="Email" content="vanillapeter@163.com">
+    <meta name="Version" content="1.0 Beta">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/flat-ui-fonts.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-switch.css"/>
+	
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/master.css"/>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap-switch.min.js"></script>
+    
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/readfile.js"></script>
+    <script type="text/javascript" src="js/querystring.js"></script>
+    <script type="text/javascript" src="js/master.js"></script>
+</HEAD>
+
+    
+  <body class="">
+    <!-- top banner -->
+	<div class="container-fluid" id="__divTopBannerContainer">
+		<img id="__imgBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="top banner"></img>
+	</div>
+	
+    <!-- top nav bar -->
+	<div class="container-fluid" id="__divTopNavBarContainer">
+		<img id="__imgTopNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__topnavbar.html'));" src="img/logo.png" style="display:none;" alt="top navigating bar"></img>
+	</div>
+    
+    <!-- main content -->
+	<div class="container-fluid" id="__divMainContentContainer">
+		<div class="row-fluid">
+			<div class="span3" id="__divLeftNavigateMenu">
+			    <img id="__imgLeftNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__leftnavbar.html'));" src="img/logo.png" style="display:none;" alt="left navigating menu"></img>
+			</div>
+
+			<div class="span9" id="__divRightMainContent">
+                <img id="__imgRightMainContentContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__master.html'));" src="img/logo.png" style="display:none;" alt="master section"></img>
+            </div>
+		</div>
+
+	</div>
+      
+	<footer>
+        <!-- bottom footer -->
+	    <div class="container-fluid " id="__divBottomFooterContainer">
+		    <img id="__imgFooterContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__footer.html'));" src="img/logo.png" style="display:none;" alt="footer section"></img>
+	    </div>
+    </footer>
+  </body>
+
+</html>

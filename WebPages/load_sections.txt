@@ -1,0 +1,26 @@
+﻿
+banner page sectin:
+<img id="__imgBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="top banner"></img>
+// its parent should be with a div class: container-fluid
+  
+top menu section section:
+<img id="__imgTopNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__topnavbar.html'));" src="img/logo.png" style="display:none;" alt="top navigating bar"></img>
+// its parent should be with a div class: container-fluid
+  
+left menu section:
+<img id="__imgLeftNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__leftnavbar.html'));" src="img/logo.png" style="display:none;" alt="left navigating menu"></img>
+// its parent should be with a div class: span3 (3 columns like that)
+  
+bottom pager section:
+<img id="__imgBottomPagerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__pager.html'));" src="img/logo.png" style="display:none;" alt="pager section"></img>
+// its parent should be with a div class: span9 (9 columns like that)
+
+bottom footer section:
+<img id="__imgFooterContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__footer.html'));" src="img/logo.png" style="display:none;" alt="footer section"></img>
+// its parent should be with a div class: container-fluid
+
+
+
+right main content - master section:
+<img id="__imgFooterContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__footer.html'));" src="img/logo.png" style="display:none;" alt="footer section"></img>
+// its parent should be with a div class: container-fluid

@@ -10,8 +10,7 @@ $(document).ready(function () {
 	
     $("#btnLogin").click(function () {
         login();
-    });	
-	
+    });
 });
 
 
@@ -24,3 +23,14 @@ function login()
 {
 	window.location.href = "security.html";
 }
+
+
+var removeTopNavigator = function ()
+{
+    $("#__divTopNavBarContainer").outerHTML = "";
+};
+
+var removeLeftMenu = function ()
+{
+    $("#__divLeftNavBarContainer").outerHTML = "";
+};

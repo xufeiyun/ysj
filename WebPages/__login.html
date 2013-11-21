@@ -1,0 +1,13 @@
+﻿
+	<form class="signin">
+		<fieldset>
+            <div><h3>用户登录</h3></div>
+			<label>登录账号(用户名称或邮箱)：</label>
+			<input id="UserName" name="UserName" type="text" placeholder="请输入登录账号" />
+			<label>登录密码：</label>
+			<input id="Password" name="Password" type="text" placeholder="请输入登录密码" />
+			<label class="checkbox"><input id="KeepSignin" name="KeepSignin" type="checkbox" />保持登录</label>
+			<button id="btnLogin" cbrc-title="Set Security Questions" cbrc-page="__security.html" onclick="loadSpecificPageContent(this);" name="SubmitType" value="signin" class="btn btn-info" type="button">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+			<button id="btnForgetPassword" name="SubmitType" value="password" class="btn" type="submit">忘记密码</button>
+		</fieldset>
+	</form>
