@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<HTML class="">
+<HEAD>
+	<TITLE>Upload Reports</TITLE>
+    <meta http-equiv="Page-Enter" Content="blendTrans(Duration=0.5)">
+    <meta http-equiv="Page-Exit" Content="blendTrans(Duration=0.5)">
+    <meta http-equiv=Access-Control-Allow-Origin content=*>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="Language Translator">
+    <meta name="Author" content="Eric Xu">
+    <meta name="Email" content="vanillapeter@163.com">
+    <meta name="Version" content="1.0 Beta">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/flat-ui-fonts.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-switch.css"/>
+	
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/master.css"/>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap-switch.min.js"></script>
+    
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/master.js"></script>
+</HEAD>
+
+
+  <body class="">
+	<div class="container-fluid ">
+		<img id="__divBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+	</div>
+	
+	<div class="container-fluid">
+		<img id="__divTopNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__topnavbar.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+		
+		<div class="row-fluid">
+			<img id="__divLeftNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__leftnavbar.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+			
+			<div class="span9">
+				<form class="form-horizontal table-hover">
+					<fieldset>
+						<legend>				
+							<div class="container-fluid ">
+								<div class="row-fluid">
+								    <!-- Title -->
+									<div class="span6">
+										Upload Report Periods of Firm1									
+									</div>
+								    <!-- Button -->
+									<div class="span6">
+										<div class="control-group">
+											<div class="controls">
+												<a id="btnCreateReportPeriod" href="#myModal" class="btn btn-primary" type="button" data-toggle="modal">Create a Report Period</a>
+											</div>
+                                        </div>
+									</div>
+								</div>
+							</div>
+						</legend>
+
+						<!-- Modal -->
+						<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h3 id="myModalLabel">Create a Report Period of Firm1</h3>
+							</div>
+							<div class="modal-body">
+								<div class="row-fluid">
+									<div class="span12">
+										<form class="form-horizontal table-hover">
+                                            <div class="control-group">
+                                                <label class="control-label">Return Due Date：</label>
+                                                <div class="controls">
+                                                    <input id="inputReportDueDate" placeholder="2013/07/12" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Report Start Date：</label>
+                                                <div class="controls">
+                                                    <input id="inputReportStartDate" placeholder="2013/07/12" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Report End Date：</label>
+                                                <div class="controls">
+                                                    <input id="inputReportEndDate" placeholder="2013/07/12" type="text" />
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Created By：</label>
+                                                <div class="controls">
+                                                    <input id="inputPassword" placeholder="Eric Xu" type="text" />
+                                                </div>
+                                            </div>
+
+										</form>
+									</div>
+								</div>
+							</div>
+							<!-- Button of Modal -->
+							<div class="modal-footer">
+								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+								<button class="btn btn-primary">Submit</button>
+							</div>
+						</div>
+
+						<button id="btnCreateReportPeriod" class="btn btn-primary" type="button">Expand All</button>
+
+					    <!-- Data -->
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Return Due Date</th>
+									<th>Reporting Period Start</th>
+									<th>Reporting Period End</th>
+									<th>Period Status</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr id="ReturnItem" class="warning hand" title="Display or Hide Details">
+									<td><button id="btnDisplayDetail" class="row_expand"></button><a href="report_dataitems.html">Return Due on 2014-7-31</a></td>
+									<td>2014-06-01</td>
+									<td>2014-06-31</td>
+									<td>Complete</td>
+									<td><a class="btn btn-info">Modify</a>&nbsp;&nbsp;<a class="btn btn-info">Upload</a></td>
+								</tr>
+								<tr id="ReturnItemDetails" class="hide">
+									<td colspan="5">
+										<table width="100%" class="">
+											<thead>
+												<th>Data Items</th>
+												<th>Result</th>
+											</thead>
+											<tbody>
+												<tr class="info">
+													<td>GB4-01</td>
+													<td>No Data</td>
+												</tr>
+												<tr class="error">
+													<td>GB4-02</td>
+													<td>No Data</td>
+												</tr>
+												<tr class="">
+													<td>GB4-03</td>
+													<td>No Data</td>
+												</tr>
+												<tr class="success">
+													<td>GB4-04</td>
+													<td>No Data</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr class="info">
+									<td><button class="row_expand"></button>Due on 2014-8-31</td>
+									<td>2014-06-01</td>
+									<td>2014-06-31</td>
+									<td>N/A</td>
+									<td><a class="btn btn-info">Modify</a>&nbsp;&nbsp;<a class="btn btn-info">Upload</a></td>
+								</tr>
+								<tr>
+									<td><button class="row_expand"></button>Due on 2014-9-30</td>
+									<td>2014-06-01</td>
+									<td>2014-06-31</td>
+									<td>ReadyToValidate</td>
+									<td><a class="btn btn-info">Modify</a>&nbsp;&nbsp;<a class="btn btn-info">Validate</a></td>
+								</tr>
+								<tr class="success">
+									<td><button class="row_expand"></button>Due on 2014-11-30</td>
+									<td>2014-06-01</td>
+									<td>2014-06-31</td>
+									<td>ReadyToConfirm</td>
+									<td><a class="btn btn-info">Modify</a>&nbsp;&nbsp;<a class="btn btn-info">Confirm</a></td>
+								</tr>
+								<tr class="error">
+									<td><button class="row_expand"></button>Due on 2014-12-31</td>
+									<td>2014-06-01</td>
+									<td>2014-06-31</td>
+									<td>Failure</td>
+									<td><a class="btn btn-info">Modify</a>&nbsp;&nbsp;<a class="btn btn-info">Resubmit</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+			    
+                <img id="__divBottomPagerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__pager.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+            </div>
+		</div>
+	</div>
+
+  </body>
+
+</html>

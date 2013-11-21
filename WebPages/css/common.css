@@ -1,4 +1,4 @@
-signin
+
 #__divTopBannerContainer
 {
     padding-left: 0px!important;
@@ -15,7 +15,7 @@ signin
     width: 100%;
     z-index: 10011;
     display: block;
-    top: 73px;
+    top: 72px;
 }
 
 #__divMainContentContainer
@@ -25,13 +25,13 @@ signin
     width: 100%;
 }
 #__divLeftNavigateMenu {
-    position: fixed;
     top: 120px;
     z-index: 1000;
+    margin-right: 0px;
 }
 #__divRightMainContent
 {
-    margin-left: 296px;
+    margin-left: 0px;
 }
 #__divBottomFooterContainer
 {

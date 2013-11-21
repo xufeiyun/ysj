@@ -23,43 +23,41 @@
 	<script type="text/javascript" src="bootstrap/js/bootstrap-switch.min.js"></script>
     
     <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/readfile.js"></script>
     <script type="text/javascript" src="js/querystring.js"></script>
+    <script type="text/javascript" src="js/readfile.js"></script>
     <script type="text/javascript" src="js/master.js"></script>
 </HEAD>
 
     
-  <body class="">
+<body class="">
     <!-- top banner -->
-	<div class="container-fluid" id="__divTopBannerContainer">
-		<img id="__imgBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="top banner"></img>
-	</div>
+    <div class="container-fluid" id="__divTopBannerContainer">
+	    <img id="__imgBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="top banner"></img>
+    </div>
 	
     <!-- top nav bar -->
-	<div class="container-fluid" id="__divTopNavBarContainer">
-		<img id="__imgTopNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__topnavbar.html'));" src="img/logo.png" style="display:none;" alt="top navigating bar"></img>
-	</div>
+    <div class="container-fluid" id="__divTopNavBarContainer">
+	    <img id="__imgTopNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__topnavbar.html'));" src="img/logo.png" style="display:none;" alt="top navigating bar"></img>
+    </div>
     
     <!-- main content -->
-	<div class="container-fluid" id="__divMainContentContainer">
-		<div class="row-fluid">
-			<div class="span3" id="__divLeftNavigateMenu">
-			    <img id="__imgLeftNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__leftnavbar.html'));" src="img/logo.png" style="display:none;" alt="left navigating menu"></img>
-			</div>
-
-			<div class="span9" id="__divRightMainContent">
-                <img id="__imgRightMainContentContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__master.html'));" src="img/logo.png" style="display:none;" alt="master section"></img>
-            </div>
-		</div>
-
-	</div>
-      
-	<footer>
-        <!-- bottom footer -->
-	    <div class="container-fluid " id="__divBottomFooterContainer">
-		    <img id="__imgFooterContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__footer.html'));" src="img/logo.png" style="display:none;" alt="footer section"></img>
+    <div class="container-fluid" id="__divMainContentContainer">
+	    <div class="row-fluid" id="__divMiddleContentConainer">
+            <div class="span2" id="__divLeftNavigateMenu"></div>
+		    <div class="span10" id="__divRightMainContent"></div>
 	    </div>
+
+    </div>
+      
+    <footer>
+    <!-- bottom footer -->
+        <div class="container-fluid " id="__divBottomFooterContainer">
+            <img id="__imgFooterContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__footer.html'));" src="img/logo.png" style="display:none;" alt="footer section"></img>
+        </div>
     </footer>
-  </body>
+    
+    <!-- initialize the login page -->
+    <img cbrc-title="Login to CBRC Application Center" cbrc-page="__login.html" onload="loadSpecificPageContent(this); $(this)[0].outerHTML='';" src="img/logo.png" style="display:none;" alt="top navigating bar"></img>
+</body>
 
 </html>

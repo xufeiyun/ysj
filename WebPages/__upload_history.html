@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<HTML class="">
+<HEAD>
+	<TITLE>Upload History</TITLE>
+    <meta http-equiv="Page-Enter" Content="blendTrans(Duration=0.5)">
+    <meta http-equiv="Page-Exit" Content="blendTrans(Duration=0.5)">
+    <meta http-equiv=Access-Control-Allow-Origin content=*>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="Language Translator">
+    <meta name="Author" content="Eric Xu">
+    <meta name="Email" content="vanillapeter@163.com">
+    <meta name="Version" content="1.0 Beta">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/flat-ui-fonts.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-switch.css"/>
+	
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/master.css"/>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap-switch.min.js"></script>
+    
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/master.js"></script>
+</HEAD>
+
+    
+  <body class="">
+	<div class="container-fluid ">
+		<img id="__divBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+	</div>
+	
+	<div class="container-fluid">
+		<img id="__divTopNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__topnavbar.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+		
+		<div class="row-fluid">
+			<img id="__divLeftNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__leftnavbar.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+			
+			<div class="span9">
+				<form class="form-horizontal table-hover">
+					<fieldset>
+						<legend>Upload Report Periods History of Firm1</legend>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Return Due Date</th>
+									<th>Reporting Period Start</th>
+									<th>Reporting Period End</th>
+									<th>Period Status</th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="warning">
+									<td><button class="row_expand"></button>Due on 2014-7-31</td>
+									<td>2014-06-01</td>
+									<td>2014-06-31</td>
+									<td>Complete</td>
+									<td><a class="btn btn-info">Download</a></td>
+								</tr>
+								<tr class="info">
+									<td><button class="row_expand"></button>Due on 2014-8-31</td>
+									<td>2014-06-01</td>
+									<td>2014-06-31</td>
+									<td>N/A</td>
+									<td><a class="btn btn-info">Download</a></td>
+								</tr>
+								<tr>
+									<td><button class="row_expand"></button>Due on 2014-9-30</td>
+									<td>2014-06-01</td>
+									<td>2014-06-31</td>
+									<td>ReadyToValidate</td>
+									<td><a class="btn btn-info">Download</a></td>
+								</tr>
+								<tr class="success">
+									<td><button class="row_expand"></button>Due on 2014-11-30</td>
+									<td>2014-06-01</td>
+									<td>2014-06-31</td>
+									<td>ReadyToConfirm</td>
+									<td><a class="btn btn-info">Download</a></td>
+								</tr>
+								<tr class="error">
+									<td><button class="row_expand"></button>Due on 2014-12-31</td>
+									<td>2014-06-01</td>
+									<td>2014-06-31</td>
+									<td>Failure</td>
+									<td><a class="btn btn-info">Download</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</fieldset>
+				</form>
+
+                <img id="__divBottomPagerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__pager.html'));" src="img/logo.png" style="display:none;" alt="placeholder"></img>
+			</div>
+		</div>
+	</div>
+
+  </body>
+
+</html>
