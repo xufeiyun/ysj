@@ -203,3 +203,15 @@ footer
     display: inline;
     padding: 0 2px;
 }
+
+.passed
+{
+    background-color: green!important;
+    color: white!important;
+}
+
+.failed
+{
+    background-color: red!important;
+    color: black!important;
+}
