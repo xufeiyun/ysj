@@ -30,6 +30,7 @@
 
     
 <body class="">
+    <div style="min-height: 100%;">
     <!-- top banner -->
     <div class="container-fluid" id="__divTopBannerContainer">
 	    <img id="__imgBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="top banner"></img>
@@ -49,13 +50,13 @@
 
     </div>
       
-    <footer>
     <!-- bottom footer -->
         <div class="container-fluid " id="__divBottomFooterContainer">
             <img id="__imgFooterContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__footer.html'));" src="img/logo.png" style="display:none;" alt="footer section"></img>
         </div>
+    <footer>
     </footer>
-    
+    </div>
     <!-- initialize the login page -->
     <img cbrc-title="Login to CBRC Application Center" cbrc-page="__login.html" onload="loadSpecificPageContent(this); $(this)[0].outerHTML='';" src="img/logo.png" style="display:none;" alt="top navigating bar"></img>
 </body>

@@ -1,4 +1,8 @@
 
+*
+{
+}
+
 #__divTopBannerContainer
 {
     padding-left: 0px!important;
@@ -13,7 +17,7 @@
     padding-left: 0px!important;
     position: fixed;
     width: 100%;
-    z-index: 10011;
+    z-index: 1001;
     display: block;
     top: 72px;
 }
@@ -32,13 +36,17 @@
 #__divRightMainContent
 {
     margin-left: 0px;
+    margin-top: 24px;
 }
-#__divBottomFooterContainer
+footer, #__divBottomFooterContainer
 {
+    height: 60px;
+    display: block;
     position: fixed;
-    bottom: 0px;
+    bottom: 0px!important;
     width: 100%;
-    background-color: rgba(218, 209, 231, 0.23);
+    background-color: rgba(218, 209, 231, 0.23)!important;
+    z-index: -1000;
 }
 
 .container-fluid
@@ -46,6 +54,7 @@
     min-width: 860px!important;
     padding-right: 0px;
     padding-left: 0px;
+    display: block;
 }
 
 .tableBorder
@@ -180,11 +189,17 @@ list-style-type: disc;
 
 footer
 {
+    display: block;
 }
-
+.footer-links 
+{
+    display: block;
+    z-index: -1;
+}
 .footer-links li:first-child {
-padding-left: 0;
+    padding-left: 0;
 }
 .footer-links li {
-display: inline;
-padding: 0 2px;
+    display: inline;
+    padding: 0 2px;
+}
