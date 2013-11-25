@@ -20,7 +20,6 @@ bottom footer section:
 // its parent should be with a div class: container-fluid
 
 
-
-right main content - master section:
-<img id="__imgFooterContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__footer.html'));" src="img/logo.png" style="display:none;" alt="footer section"></img>
+left-right main content - master section:
+<img id="__imgMainContentContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__maincontent.html'));" src="img/logo.png" style="display:none;" alt="left-right main content"></img>
 // its parent should be with a div class: container-fluid

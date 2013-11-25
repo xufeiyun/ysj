@@ -1,64 +1,59 @@
 ﻿<!DOCTYPE html>
 <HTML class="">
-<HEAD>
-	<TITLE>Master UI Page Template</TITLE>
-    <meta http-equiv="Page-Enter" Content="blendTrans(Duration=0.5)">
-    <meta http-equiv="Page-Exit" Content="blendTrans(Duration=0.5)">
-    <meta http-equiv=Access-Control-Allow-Origin content=*>
-    <meta charset="UTF-8">
-    <meta name="Keywords" content="Language Translator">
-    <meta name="Author" content="Eric Xu">
-    <meta name="Email" content="vanillapeter@163.com">
-    <meta name="Version" content="1.0 Beta">
+    <HEAD>
+	    <TITLE>Master UI Page Template</TITLE>
+        <meta http-equiv="Page-Enter" Content="blendTrans(Duration=0.5)">
+        <meta http-equiv="Page-Exit" Content="blendTrans(Duration=0.5)">
+        <meta http-equiv=Access-Control-Allow-Origin content=*>
+        <meta charset="UTF-8">
+        <meta name="Keywords" content="Language Translator">
+        <meta name="Author" content="Eric Xu">
+        <meta name="Email" content="vanillapeter@163.com">
+        <meta name="Version" content="1.0 Beta">
 
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="bootstrap/css/flat-ui-fonts.css"/>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-switch.css"/>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="bootstrap/css/flat-ui-fonts.css"/>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-switch.css"/>
 	
-    <link rel="stylesheet" href="css/common.css"/>
-    <link rel="stylesheet" href="css/master.css"/>
+        <link rel="stylesheet" href="css/common.css"/>
+        <link rel="stylesheet" href="css/master.css"/>
     
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap-switch.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+	    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="bootstrap/js/bootstrap-switch.min.js"></script>
     
-    <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/querystring.js"></script>
-    <script type="text/javascript" src="js/readfile.js"></script>
-    <script type="text/javascript" src="js/master.js"></script>
-</HEAD>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/querystring.js"></script>
+        <script type="text/javascript" src="js/readfile.js"></script>
+        <script type="text/javascript" src="js/master.js"></script>
+    </HEAD>
 
     
-<body class="">
-    <div style="min-height: 100%;">
-    <!-- top banner -->
-    <div class="container-fluid" id="__divTopBannerContainer">
-	    <img id="__imgBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="top banner"></img>
-    </div>
+    <body class="">
+        <div style="min-height: 100%;">
+        <!-- top banner -->
+        <div class="container-fluid" id="__divTopBannerContainer">
+	        <img id="__imgBannerContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__banner.html'));" src="img/logo.png" style="display:none;" alt="top banner"></img>
+        </div>
 	
-    <!-- top nav bar -->
-    <div class="container-fluid" id="__divTopNavBarContainer">
-	    <img id="__imgTopNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__topnavbar.html'));" src="img/logo.png" style="display:none;" alt="top navigating bar"></img>
-    </div>
+        <!-- top nav bar -->
+        <div class="container-fluid" id="__divTopNavBarContainer">
+	        <img id="__imgTopNavBarContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__topnavbar.html'));" src="img/logo.png" style="display:none;" alt="top navigating bar"></img>
+        </div>
     
-    <!-- main content -->
-    <div class="container-fluid" id="__divMainContentContainer">
-	    <div class="row-fluid" id="__divMiddleContentConainer">
-            <div class="span2" id="__divLeftNavigateMenu"></div>
-		    <div class="span10" id="__divRightMainContent"></div>
-	    </div>
-
-    </div>
+        <!-- main content -->
+        <div class="container-fluid" id="__divMainContentContainer">
+            <img id="__imgMainContentContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__maincontent.html'));" src="img/logo.png" style="display:none;" alt="left-right main content"></img>
+        </div>
       
-    <!-- bottom footer -->
+        <!-- bottom footer -->
         <div class="container-fluid " id="__divBottomFooterContainer">
             <img id="__imgFooterContainer" onload="this.outerHTML=(ReadFileAPI.getFileContentsSync('__footer.html'));" src="img/logo.png" style="display:none;" alt="footer section"></img>
         </div>
-    <footer>
-    </footer>
-    </div>
-    <!-- initialize the login page -->
-    <img cbrc-title="Login to CBRC Application Center" cbrc-page="__login.html" onload="loadSpecificPageContent(this); $(this)[0].outerHTML='';" src="img/logo.png" style="display:none;" alt="top navigating bar"></img>
-</body>
+
+        </div>
+        <!-- initialize the login page -->
+        <img cbrc-title="Login to CBRC Application Center" cbrc-page="__login.html" onload="loadSpecificPageContent(this); $(this)[0].outerHTML='';" src="img/logo.png" style="display:none;" alt="top navigating bar"></img>
+    </body>
 
 </html>
