@@ -215,3 +215,8 @@ footer
     background-color: red!important;
     color: black!important;
 }
+
+.nav-header
+{
+    font-size: 16px;
+}
