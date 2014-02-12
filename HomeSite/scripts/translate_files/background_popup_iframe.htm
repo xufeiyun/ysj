@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)chrome-extension://hfcnemnjojifmhdgdbhnhiinmjdohlel/background_popup_iframe.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Language Translator Extension</title>
+    <link rel="stylesheet" href="chrome-extension://hfcnemnjojifmhdgdbhnhiinmjdohlel/style/content_iframe.css">
+    <script type="text/javascript" src="chrome-extension://hfcnemnjojifmhdgdbhnhiinmjdohlel/script/addDOMLoadEvent.js"></script>
+    <script type="text/javascript" src="chrome-extension://hfcnemnjojifmhdgdbhnhiinmjdohlel/script/jquery.min.js"></script>
+    <script type="text/javascript" src="chrome-extension://hfcnemnjojifmhdgdbhnhiinmjdohlel/script/common.js"></script>
+    <script type="text/javascript" src="chrome-extension://hfcnemnjojifmhdgdbhnhiinmjdohlel/script/wikipages.js"></script>
+    <script type="text/javascript" src="chrome-extension://hfcnemnjojifmhdgdbhnhiinmjdohlel/script/translators.js"></script>
+    <script type="text/javascript" src="chrome-extension://hfcnemnjojifmhdgdbhnhiinmjdohlel/script/content_iframe.js"></script>
+</head>
+<body style="">
+
+<div id="divLanguageTranslatorInFrame" class="content_iframe">
+    <article class="hide audiopart">
+        <section>
+            <fieldset>
+                <legend>Read Text by YouDao Sound API</legend>
+                <div id="divReadSource"><audio buttonid="btnReadSource" controls="controls" preload="preload" src="http://tts.baidu.com/text2audio?lan=en&amp;ie=UTF-8&amp;text=if(typeof%20Domo%20!=%20" undefined')%20domo.translate%20="%20Domo.translate%20%7C%7C%20%7B%7D;%20%0ADomo.translate%5B%22en-us%22%5D%20=%20%7B%7D;&#39;" id="audioReadSource"></audio></div>
+                <div id="divReadMain"><audio buttonid="btnReadMain" controls="controls" preload="preload" src="http://tts.baidu.com/text2audio?lan=zh&amp;ie=UTF-8&amp;text=%E5%A6%82%E6%9E%9C(%E2%80%9C%E5%A4%9A%E6%91%A9%E5%90%9B!=%E2%80%9C%E5%AE%9A%E4%B9%89%E2%80%9D)%E5%A4%9A%E6%91%A9%E5%90%9B%E3%80%82%E7%BF%BB%E8%AF%91=%E5%A4%9A%E6%91%A9%E5%90%9B%E3%80%82%E7%BF%BB%E8%AF%91%7C%20%7C%20%7B%20%7D;,%E5%A4%9A%E6%91%A9%E5%90%9B%E3%80%82%E7%BF%BB%E8%AF%91(%E2%80%9Cen%20-%20us%E2%80%9D)=%20%7B%20%7D;" id="audioReadMain"></audio></div>
+                <div id="divReadMore"><audio buttonid="btnReadMore" controls="controls" preload="preload" src="http://tts.baidu.com/text2audio?lan=zh&amp;ie=UTF-8&amp;text=%E5%A6%82%E6%9E%9C(%E2%80%9C%E5%A4%9A%E6%91%A9%E5%90%9B!=%E2%80%9C%E5%AE%9A%E4%B9%89%E2%80%9D)%E5%A4%9A%E6%91%A9%E5%90%9B%E3%80%82%E7%BF%BB%E8%AF%91=%E5%A4%9A%E6%91%A9%E5%90%9B%E3%80%82%E7%BF%BB%E8%AF%91%7C%20%7C%20%7B%20%7D;,%E5%A4%9A%E6%91%A9%E5%90%9B%E3%80%82%E7%BF%BB%E8%AF%91(%E2%80%9Cen%20-%20us%E2%80%9D)=%20%7B%20%7D;" id="audioReadMore"></audio></div>
+            </fieldset>
+        </section>
+    </article>
+    <article>
+        <section>
+            <div id="divNavTitle" title="View the Language-Translator extension on Google webstore" class="navbar navbar-static-top">
+                <div class="navbar-inner">
+                    <a id="btnLogo" class="brand logoProduct" href="chrome-extension://hfcnemnjojifmhdgdbhnhiinmjdohlel/background_popup_iframe.html#"></a>
+                    <a id="btnTitle" class="brand title" href="chrome-extension://hfcnemnjojifmhdgdbhnhiinmjdohlel/background_popup_iframe.html#">Language Translator</a>
+                </div>
+            </div>
+        </section>
+    </article>
+    <article>
+        <section>
+            <form class="form-search">
+                <fieldset>
+                    <span class="sourcetext btn-link" id="btnViewWikipage" title="View Encyclopedia">Source Text </span><span id="btnReadSource" title="Pronunciation of Source Text" class="hand icon-volume-up"></span>(<strong>Ctrl</strong>+<strong>Enter</strong> <span>or</span>
+                    <input id="btnTranslate" type="button" class="btn-mini btn-success hand" title="Translate the input text manually (Ctrl+Enter)" value=" Translate">):<br>
+                    <textarea id="txtSelected" rows="3" class="fixedw text-warning input-medium search-query input-xxlarge" placeholder="SELECT or TYPE text and wait a second..."></textarea><br>                    
+                    <span class="mainmeaning">Main Meanings </span><a id="btnReadMain" title="Pronunciation of Main Meanings" class="hand icon-volume-up"></a>:<br>
+                    <textarea id="txtTranslated" rows="4" class="fixedw text-success input-medium search-query input-xxlarge" placeholder="NO VALID SOURCE"></textarea><br>
+                    <span class="moremeaning">More Meanings </span><a id="btnReadMore" title="Pronunciation of More Meanings" class="hand icon-volume-up"></a>:<br>
+                    <textarea id="txtTranslatedAll" rows="6" class="fixedw text-info input-medium search-query input-xxlarge" placeholder="NO VALID SOURCE">如果(“多摩君!=“定义”)多摩君。翻译=多摩君。翻译| | { };,多摩君。翻译(“en - us”)= { };</textarea><br>                    
+                    <div id="logoYouDao" class="logoAPI">Data Provided by <span id="btnYouDaoAPI" class="youdaolink" title="YOUDAO translateor API">YOUDAO translator</span>!</div>
+                    <div>
+                        <span id="btnFeatures" class="optionslink" title="View Features of the Language Translator">Features</span>
+                        <span id="btnOptions" class="optionslink" title="Set Options of the Language Translator">Options</span>
+                        <span id="btnOperations" class="optionslink" title="View Operations of the Language Translator">HOWTO</span>
+                        <span id="btnDonations" class="donationslink" title="Donate to Author">Donation</span>
+                        <span id="btnAbout" class="optionslink" title="About the Language Translator">About</span>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </article>
+</div>
+
+
+
+</body></html>
