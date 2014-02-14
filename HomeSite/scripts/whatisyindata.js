@@ -1,20 +1,20 @@
 $(function() {
 
-	var animated = !$('.whatisdomo-container').hasClass('no-animation');
+	var animated = !$('.whatisyindata-container').hasClass('no-animation');
 
 	if(animated) {
-		whatisdomo.init();
+		whatisyindata.init();
 	}
 
 	$(document).on('scroll load resize ready', function() {
-		whatisdomo.scrollUpdate();
-		whatisdomo.heroFullscreen();
-		whatisdomo.headerAdjust();
+		whatisyindata.scrollUpdate();
+		whatisyindata.heroFullscreen();
+		whatisyindata.headerAdjust();
 	});
 
 });
 
-var whatisdomo = (function() {
+var whatisyindata = (function() {
 	var _window = $(window),
 		scrollTop = _window.scrollTop(),
 		actionPoints = getActionPoints(),
@@ -72,13 +72,13 @@ var whatisdomo = (function() {
 
 	function videoCheck() {
 		if(windowWidth > 840) {
-			//$('.whatisdomo-container').find('.hero').prepend('<video preload="auto" autoplay loop id="bgvid"><source src="/assets/images/domoPeopleLoop_960x540.webm" type="video/webm"><source src="/assets/images/domoPeopleLoop_960x540.mp4" type="video/mp4"></video>');
+			//$('.whatisyindata-container').find('.hero').prepend('<video preload="auto" autoplay loop id="bgvid"><source src="/assets/images/domoPeopleLoop_960x540.webm" type="video/webm"><source src="/assets/images/domoPeopleLoop_960x540.mp4" type="video/mp4"></video>');
 			//video = document.getElementById('bgvid');
 		}
 	}
 
 	function heroFullscreen() {
-		$('.whatisdomo-container').find('.hero').height($(window).height() * 0.8);
+		$('.whatisyindata-container').find('.hero').height($(window).height() * 0.8);
 	}
 
 	function createPaginationDots() {
@@ -96,7 +96,7 @@ var whatisdomo = (function() {
 			$(this).add('.spotlight-content:eq(' + dotIndex + ')').addClass('current');
 			currentTestimony = dotIndex;
 			clearInterval(testimony);
-			testimony = setInterval(whatisdomo.testimonyCycle, 8000);
+			testimony = setInterval(whatisyindata.testimonyCycle, 8000);
 		});
 
 		$('.pagination-dots').width(($('.dot').outerWidth(true)) * spotlights.length);
@@ -198,7 +198,7 @@ var whatisdomo = (function() {
 	function scrollUpdate() {
 		if(scrollTop > actionPoints.wordRotater) {
 			if(!isRotating) {
-				window.setInterval(whatisdomo.wordRotate, 2000);
+				window.setInterval(whatisyindata.wordRotate, 2000);
 				isRotating = true;
 			}
 		}
@@ -233,7 +233,7 @@ var whatisdomo = (function() {
 
 		if(scrollTop > actionPoints.testimonyCycle && tRunning === false) {
 			clearInterval(testimony);
-			testimony = setInterval(whatisdomo.testimonyCycle, 8000);
+			testimony = setInterval(whatisyindata.testimonyCycle, 8000);
 			tRunning = true;
 		} else if(scrollTop < actionPoints.testimonyCycle && tRunning === true) {
 			clearInterval(testimony);
@@ -273,7 +273,7 @@ $(function(){
 		duration,
 		start = 0;
 
-	var animated = !$('.whatisdomo-container').hasClass('no-animation');
+	var animated = !$('.whatisyindata-container').hasClass('no-animation');
 
 	function init() {
 		windowWidth = _window.width(),
